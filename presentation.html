@@ -8,20 +8,19 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/theme/white.min.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Roboto+Condensed:wght@400&family=Roboto:wght@400;700&family=Source+Code+Pro:wght@400&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,700;1,400&family=Roboto+Condensed:wght@400;500&family=Roboto:wght@400;700&family=Source+Code+Pro:wght@400&display=swap" rel="stylesheet" />
   <style>
-    /* ── DESIGN TOKENS (USyd brand) ───────────────────────────── */
+    /* ── DESIGN TOKENS (USyd brand — OKLCH) ───────────────────── */
     :root {
-      --ochre:        #E64626;
-      --blue:         #0148A4;
-      --yellow:       #FFB800;
-      --charcoal:     #424242;
-      --near-black:   #0A0A0A;
-      --neutral-grey: #F1F1F1;
-      --warm-white:   #FCEDE2;
-      --white:        #FFFFFF;
-      --muted:        #7A7A7A;
-      --rule:         #D6D6D6;
+      --ochre:        oklch(0.59 0.21 30);
+      --near-black:   oklch(0.08 0.008 30);
+      --charcoal:     oklch(0.36 0.008 30);
+      --neutral-grey: oklch(0.96 0.005 30);
+      --warm-white:   oklch(0.95 0.03 60);
+      --white:        oklch(0.99 0.005 30);
+      --muted:        oklch(0.54 0.006 30);
+      --rule:         oklch(0.88 0.005 30);
+      --utility-blue: oklch(0.38 0.18 263);
     }
 
     /* ── GLOBAL RESETS ─────────────────────────────────────────── */
@@ -43,20 +42,20 @@
 
     /* ── TYPOGRAPHY ────────────────────────────────────────────── */
     .reveal h1 {
-      font-family: 'Roboto Condensed', Arial, sans-serif;
-      font-weight: 400;
-      color: var(--charcoal);
+      font-family: 'Spectral', Georgia, serif;
+      font-weight: 700;
+      color: var(--near-black);
       font-size: 1.45em;
-      line-height: 1.2;
-      margin: 5px 0 10px;
+      line-height: 1.15;
+      margin: 5px 0 12px;
       text-transform: none;
-      letter-spacing: normal;
+      letter-spacing: -0.01em;
     }
 
-    /* H2 = the prescribed in-body Ochre application */
+    /* H2 = Roboto Condensed 500, Ochre — sans counterpoint to the serif H1 */
     .reveal h2 {
       font-family: 'Roboto Condensed', Arial, sans-serif;
-      font-weight: 400;
+      font-weight: 500;
       color: var(--ochre);
       font-size: 0.95em;
       line-height: 1.2;
@@ -99,9 +98,10 @@
 
     .reveal strong { font-weight: 700; }
 
-    /* Blockquote: Patrick Hand, direct quotation only */
+    /* Blockquote: Spectral italic — cited passages only */
     .reveal blockquote {
-      font-family: 'Patrick Hand', cursive;
+      font-family: 'Spectral', Georgia, serif;
+      font-style: italic;
       font-size: 0.72em;
       color: var(--charcoal);
       line-height: 1.45;
@@ -110,7 +110,6 @@
       border: none;
       background: none;
       width: 100%;
-      font-style: normal;
     }
 
     .reveal blockquote cite {
@@ -234,7 +233,7 @@
     .title-slide h1 {
       color: var(--white) !important;
       font-size: 1.55em;
-      line-height: 1.2;
+      line-height: 1.15;
       max-width: 85%;
     }
 
@@ -264,19 +263,19 @@
     }
 
     /* ── SEGUE SLIDES ────────────────────────────────────────────── */
-    .reveal .slides section.segue-blue {
-      background-color: var(--blue) !important;
+    .reveal .slides section.segue-black {
+      background-color: var(--near-black) !important;
       text-align: center;
     }
 
-    .segue-blue h1 {
+    .segue-black h1 {
       color: var(--white) !important;
       font-size: 1.75em;
-      text-shadow: 0 0 20px #333;
+      text-shadow: 0 0 40px oklch(0.59 0.21 30 / 0.35);
     }
 
-    .segue-blue p {
-      color: rgba(255,255,255,0.75) !important;
+    .segue-black p {
+      color: oklch(0.99 0.005 30 / 0.6) !important;
       font-size: 0.75em;
       text-transform: uppercase;
       letter-spacing: 0.1em;
@@ -637,7 +636,7 @@
 <!-- ═══════════════════════════════════════════════════════════
      SEGUE 1
 ════════════════════════════════════════════════════════════ -->
-<section class="segue-blue">
+<section class="segue-black">
   <p>Part I</p>
   <h1>Background and Context</h1>
 </section>
@@ -738,7 +737,7 @@
 <!-- ═══════════════════════════════════════════════════════════
      SEGUE 2
 ════════════════════════════════════════════════════════════ -->
-<section class="segue-blue">
+<section class="segue-black">
   <p>Part II</p>
   <h1>Literature and Theoretical Framework</h1>
 </section>
@@ -806,7 +805,7 @@
 <!-- ═══════════════════════════════════════════════════════════
      SEGUE 3
 ════════════════════════════════════════════════════════════ -->
-<section class="segue-blue">
+<section class="segue-black">
   <p>Part III</p>
   <h1>Findings</h1>
 </section>
