@@ -1,0 +1,155 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-05-16T00:00:00Z",
+  "title": "Design System: University of Sydney Presentations",
+  "extensions": {
+    "colorMeta": {
+      "signal-ochre": {
+        "role": "primary",
+        "displayName": "Signal Ochre",
+        "canonical": "oklch(55% 0.22 30)",
+        "tonalRamp": ["#3D0E05", "#5E1C0F", "#893428", "#C24030", "#E64626", "#F09A94", "#F5C0BB", "#FAE3E0"]
+      },
+      "academic-blue": {
+        "role": "secondary",
+        "displayName": "Academic Blue",
+        "canonical": "oklch(35% 0.18 260)",
+        "tonalRamp": ["#050B1A", "#0A1730", "#102554", "#0148A4", "#1A62C0", "#4D88D4", "#95B9E8", "#D1E4F5"]
+      },
+      "accent-yellow": {
+        "role": "tertiary",
+        "displayName": "Accent Yellow",
+        "canonical": "oklch(80% 0.18 85)",
+        "tonalRamp": ["#2C1A00", "#4D3400", "#7A5500", "#B07E00", "#FFB800", "#F5C640", "#FAD97A", "#FDEFC8"]
+      },
+      "body-charcoal": {
+        "role": "neutral",
+        "displayName": "Body Charcoal",
+        "canonical": "oklch(30% 0.00 0)",
+        "tonalRamp": ["#0D0D0D", "#1A1A1A", "#2B2B2B", "#424242", "#5E5E5E", "#7A7A7A", "#ABABAB", "#D6D6D6"]
+      },
+      "near-black": {
+        "role": "neutral",
+        "displayName": "Near Black",
+        "canonical": "oklch(10% 0.005 30)",
+        "tonalRamp": ["#030303", "#060606", "#0A0A0A", "#141414", "#1E1E1E", "#2A2A2A", "#404040", "#6A6A6A"]
+      },
+      "neutral-grey": {
+        "role": "neutral",
+        "displayName": "Neutral Grey",
+        "canonical": "oklch(95% 0.00 0)",
+        "tonalRamp": ["#2B2B2B", "#424242", "#5E5E5E", "#8A8A8A", "#ABABAB", "#C8C8C8", "#E0E0E0", "#F1F1F1"]
+      },
+      "warm-white": {
+        "role": "neutral",
+        "displayName": "Warm White",
+        "canonical": "oklch(95% 0.015 40)",
+        "tonalRamp": ["#3D1A08", "#5E3018", "#8A5030", "#B87850", "#D4A070", "#ECC8A8", "#F5DECA", "#FCEDE2"]
+      },
+      "white": {
+        "role": "neutral",
+        "displayName": "White",
+        "canonical": "oklch(100% 0.00 0)",
+        "tonalRamp": ["#1A1A1A", "#333333", "#545454", "#7A7A7A", "#A0A0A0", "#C2C2C2", "#E0E0E0", "#FFFFFF"]
+      }
+    },
+    "typographyMeta": {
+      "headline": { "displayName": "Headline", "purpose": "Slide title (H1). Condensed form provides visual scale without weight." },
+      "body": { "displayName": "Body", "purpose": "Prose and bullet lists. Tight line-height is intentional for academic density." },
+      "label": { "displayName": "Label", "purpose": "Footnotes, slide numbers, aside text." },
+      "code": { "displayName": "Code", "purpose": "Code blocks (Neutral Grey background) and inline code." }
+    },
+    "shadows": [],
+    "motion": [
+      { "name": "text-shadow-legibility", "value": "0 0 20px #333", "purpose": "Applied to text on dark segue backgrounds (Ochre, Blue) for projector legibility. Not an aesthetic choice." }
+    ],
+    "breakpoints": []
+  },
+  "components": [
+    {
+      "name": "Title Slide",
+      "kind": "custom",
+      "refersTo": "title-slide",
+      "description": "Full-bleed Signal Ochre slide. The institutional identity anchor; opens every presentation.",
+      "html": "<div class=\"ds-title-slide\"><div class=\"ds-title-slide__content\"><p class=\"ds-title-slide__title\">Accounting for Accountability</p><p class=\"ds-title-slide__subtitle\">Research Presentation</p><p class=\"ds-title-slide__author\">Author Name · University of Sydney</p></div><img class=\"ds-title-slide__logo\" src=\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 40'%3E%3Crect width='120' height='40' fill='none'/%3E%3Ctext x='4' y='28' font-family='serif' font-size='14' fill='white'%3EUniversity of Sydney%3C/text%3E%3C/svg%3E\" alt=\"University of Sydney\">",
+      "css": ".ds-title-slide { background-color: #E64626; width: 100%; height: 100%; padding: 25px 50px; box-sizing: border-box; display: flex; flex-direction: column; justify-content: center; position: relative; font-family: 'Roboto', Arial, sans-serif; } .ds-title-slide__content { text-align: left; } .ds-title-slide__title { font-family: 'Roboto Condensed', Arial, sans-serif; font-weight: 400; font-size: 2em; color: #FFFFFF; margin: 0 0 12px 0; line-height: 1.2; } .ds-title-slide__subtitle { font-family: 'Roboto', Arial, sans-serif; font-weight: 400; font-size: 1.1em; color: #FFFFFF; margin: 0 0 8px 0; opacity: 0.9; } .ds-title-slide__author { font-family: 'Roboto', Arial, sans-serif; font-weight: 400; font-size: 0.9em; color: #FFFFFF; margin: 0; opacity: 0.8; } .ds-title-slide__logo { position: absolute; bottom: 5%; right: 5%; width: 15%; opacity: 0.95; }"
+    },
+    {
+      "name": "Content Slide",
+      "kind": "custom",
+      "refersTo": null,
+      "description": "Default content vessel. White background, Roboto Condensed headings, Ochre H2.",
+      "html": "<div class=\"ds-content-slide\"><h1 class=\"ds-content-slide__h1\">Slide Title</h1><h2 class=\"ds-content-slide__h2\">Section Subheading</h2><ul class=\"ds-content-slide__list\"><li>First argument with supporting evidence</li><li>Second argument elaborated</li><li>Third point with citation<sup>1</sup></li></ul><p class=\"ds-content-slide__footnote\"><sup>1</sup> Author (Year). Title. <em>Journal</em>.</p></div>",
+      "css": ".ds-content-slide { background-color: #FFFFFF; width: 100%; height: 100%; padding: 25px 50px; box-sizing: border-box; font-family: 'Roboto', Arial, sans-serif; color: #424242; position: relative; } .ds-content-slide__h1 { font-family: 'Roboto Condensed', Arial, sans-serif; font-weight: 400; color: #424242; margin-top: 5px; margin-bottom: 10px; line-height: 1.2; font-size: 1.6em; } .ds-content-slide__h2 { font-family: 'Roboto Condensed', Arial, sans-serif; font-weight: 400; color: #E64626; margin-top: 5px; margin-bottom: 10px; line-height: 1.2; font-size: 1.2em; } .ds-content-slide__list { margin: 0; padding-left: 1.5em; } .ds-content-slide__list li { font-size: 1em; line-height: 1.4; margin-top: 0.5em; margin-bottom: 0.5em; } .ds-content-slide__footnote { position: absolute; bottom: 20px; left: 50px; right: 50px; font-size: 0.7em; color: #7A7A7A; line-height: 1.3; }"
+    },
+    {
+      "name": "Segue — Blue",
+      "kind": "custom",
+      "refersTo": "segue-blue",
+      "description": "Section break slide. Academic Blue background, centered text, slide number suppressed.",
+      "html": "<div class=\"ds-segue-blue\"><p class=\"ds-segue-blue__label\">Part II</p><h2 class=\"ds-segue-blue__title\">Theoretical Framework</h2></div>",
+      "css": ".ds-segue-blue { background-color: #0148A4; width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 25px 50px; box-sizing: border-box; } .ds-segue-blue__label { font-family: 'Roboto', Arial, sans-serif; font-weight: 400; font-size: 0.85em; color: rgba(255,255,255,0.75); text-transform: uppercase; letter-spacing: 0.1em; margin: 0 0 12px 0; } .ds-segue-blue__title { font-family: 'Roboto Condensed', Arial, sans-serif; font-weight: 400; font-size: 1.8em; color: #FFFFFF; text-shadow: 0 0 20px #333; margin: 0; line-height: 1.2; }"
+    },
+    {
+      "name": "Segue — Ochre",
+      "kind": "custom",
+      "refersTo": "segue-red",
+      "description": "Section break slide. Signal Ochre background, centered text.",
+      "html": "<div class=\"ds-segue-ochre\"><h2 class=\"ds-segue-ochre__title\">Conclusions</h2></div>",
+      "css": ".ds-segue-ochre { background-color: #E64626; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; text-align: center; padding: 25px 50px; box-sizing: border-box; } .ds-segue-ochre__title { font-family: 'Roboto Condensed', Arial, sans-serif; font-weight: 400; font-size: 1.8em; color: #FFFFFF; text-shadow: 0 0 20px rgba(0,0,0,0.4); margin: 0; line-height: 1.2; }"
+    },
+    {
+      "name": "Code Block",
+      "kind": "custom",
+      "refersTo": "code-block",
+      "description": "Preformatted code on Neutral Grey background. No border, no radius.",
+      "html": "<div class=\"ds-code-slide\"><h1 class=\"ds-code-slide__h1\">R Example</h1><pre class=\"ds-code-block\"><code>model &lt;- lm(outcome ~ predictor + control, data = df)\nsummary(model)</code></pre></div>",
+      "css": ".ds-code-slide { background-color: #FFFFFF; width: 100%; height: 100%; padding: 25px 50px; box-sizing: border-box; font-family: 'Roboto', Arial, sans-serif; color: #424242; } .ds-code-slide__h1 { font-family: 'Roboto Condensed', Arial, sans-serif; font-weight: 400; color: #424242; margin-top: 5px; margin-bottom: 16px; font-size: 1.6em; line-height: 1.2; } .ds-code-block { background-color: #F1F1F1; border-radius: 0; border: none; padding: 16px 20px; margin: 0; overflow-x: auto; } .ds-code-block code { font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace; font-size: 0.75em; font-weight: 400; color: #424242; white-space: pre; display: block; line-height: 1.5; }"
+    },
+    {
+      "name": "Two-Column Layout",
+      "kind": "custom",
+      "refersTo": null,
+      "description": "60/36 asymmetric split for argument + evidence. No borders or backgrounds on columns.",
+      "html": "<div class=\"ds-two-col-slide\"><h1 class=\"ds-two-col-slide__h1\">Argument + Evidence</h1><div class=\"ds-two-col\"><div class=\"ds-two-col__main\"><p>Primary argument text occupies the wider left column. The asymmetry reflects academic convention: argument leads, evidence supports.</p><p>Second paragraph of analysis, elaborating the main claim.</p></div><div class=\"ds-two-col__aside\"><p><strong>Table 1.</strong> Summary statistics.</p><p>n = 240, p &lt; 0.001</p></div></div></div>",
+      "css": ".ds-two-col-slide { background-color: #FFFFFF; width: 100%; height: 100%; padding: 25px 50px; box-sizing: border-box; font-family: 'Roboto', Arial, sans-serif; color: #424242; } .ds-two-col-slide__h1 { font-family: 'Roboto Condensed', Arial, sans-serif; font-weight: 400; font-size: 1.6em; color: #424242; margin-top: 5px; margin-bottom: 16px; line-height: 1.2; } .ds-two-col { display: flex; gap: 4%; align-items: flex-start; } .ds-two-col__main { width: 60%; font-size: 1em; line-height: 1.4; } .ds-two-col__main p { margin-top: 0.5em; margin-bottom: 0.5em; } .ds-two-col__aside { width: 36%; font-size: 0.9em; line-height: 1.4; color: #5E5E5E; } .ds-two-col__aside p { margin-top: 0.5em; margin-bottom: 0.5em; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Forensic Brief",
+    "overview": "University of Sydney presentations operate like well-prepared scholarly briefs. Every slide is a statement of fact or argument, stripped of decoration. Signal Ochre (#E64626) functions as an institutional stamp — it appears in frame title text, section breaks, and the full-bleed title slide background — but it does not embroider. The typographic system (Roboto Condensed for headings, Roboto for body) carries the cognitive load without visual noise.\n\nThe system rejects the language of the conference-circuit PowerPoint: no gradient fills, no SmartArt, no icon grids, no shadow boxes. It also rejects the visual clichés of science communication — illustration-heavy slides, vivid multi-colour palettes, Kurzgesagt-style layouts. The audience is peer-level academics contributing to venues like Critical Perspectives on Accounting; the design signals that the researcher knows this.\n\nThe governing logic is restraint with purpose. Colour backgrounds (Ochre, Academic Blue, Accent Yellow) mark structural boundaries — title slides, section transitions, segue slides — not decoration within content slides. Content slides are typographic: left-aligned, grid-locked, high information density.",
+    "keyCharacteristics": [
+      "Flat surfaces, zero decorative elements on content slides",
+      "Signal Ochre as structural marker only — never used as a decorative accent within content slide bodies",
+      "All layout is left-aligned and grid-anchored",
+      "Typography (Roboto Condensed / Roboto) carries hierarchy without weight or ornament",
+      "High information density — calibrated for peer audiences who read slides as documents"
+    ],
+    "rules": [
+      { "name": "The Structural Signal Rule", "body": "Ochre, Blue, and Yellow appear only at structural boundaries: title slides, segue slides, H2 heading colour, block titles. Within a content slide body, all surfaces are white or Neutral Grey. Colour appearing inside a content slide body is evidence of a design error.", "section": "colors" },
+      { "name": "The Rarity Rule", "body": "Signal Ochre covers the full title slide background and frame H2 text. That is its full budget. An Ochre accent added anywhere else is a violation, not a bonus.", "section": "colors" },
+      { "name": "The Weight-Free Rule", "body": "Heading hierarchy is achieved through condensed form and size, not weight. Do not bold slide headings at any level. Bold within body text is for factual emphasis only — a key term, a datum — never for stylistic effect.", "section": "typography" },
+      { "name": "The Density Rule", "body": "Line height is tight by design (1.3–1.4). Academic slides carry argument, not white space. Do not increase line height to open up slides; reduce content instead.", "section": "typography" },
+      { "name": "The Flat-By-Default Rule", "body": "Shadows do not exist on content slides. If a design element needs to pop or appear lifted, the answer is typographic scale or tonal background layering — not shadow. A drop shadow on a content slide is always wrong.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do use Signal Ochre only at structural boundaries: title slides, segue-red slides, H2 heading colour, block title backgrounds. Nowhere else.",
+      "Do use Roboto Condensed at normal weight (400) for all headings. Size provides hierarchy; weight does not.",
+      "Do keep slide padding fixed at 25px vertical / 50px horizontal. Tighter padding signals unpreparedness.",
+      "Do use the 60/36 asymmetric two-column split for argument + evidence layouts.",
+      "Do use footnotes for citations. Academic audiences notice absent references.",
+      "Do use Neutral Grey (#F1F1F1) for code blocks and example slides — the only prescribed in-body surface variation.",
+      "Do trust the type. Roboto Condensed headings and Roboto body text at the specified sizes carry all necessary hierarchy without additional visual intervention."
+    ],
+    "donts": [
+      "Don't use gradient fills, SmartArt-style layouts, clip art, or shadow boxes on any slide.",
+      "Don't use blue gradients, icon grids, or illustration-heavy layouts — the visual language of general-audience science communication is explicitly rejected.",
+      "Don't apply Signal Ochre inside a content slide body as a decorative element. H2 heading colour is the full allocation.",
+      "Don't bold headings at any level. The Weight-Free Rule applies throughout.",
+      "Don't add drop shadows to slide components or content surfaces. Flat-By-Default.",
+      "Don't use Patrick Hand (the blockquote font) for anything other than a directly cited quotation.",
+      "Don't increase line height to create breathing room. Reduce content instead — the density is intentional.",
+      "Don't design for a general audience. This system is calibrated for peer-level academic conferences."
+    ]
+  }
+}
