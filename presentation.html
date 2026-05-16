@@ -1,0 +1,946 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Social and Environmental Responsibility in Accounting — Akpan &amp; Oluwagbade 2023</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/reveal.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/theme/white.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Roboto+Condensed:wght@400&family=Roboto:wght@400;700&family=Source+Code+Pro:wght@400&display=swap" rel="stylesheet" />
+  <style>
+    /* ── DESIGN TOKENS (USyd brand) ───────────────────────────── */
+    :root {
+      --ochre:        #E64626;
+      --blue:         #0148A4;
+      --yellow:       #FFB800;
+      --charcoal:     #424242;
+      --near-black:   #0A0A0A;
+      --neutral-grey: #F1F1F1;
+      --warm-white:   #FCEDE2;
+      --white:        #FFFFFF;
+      --muted:        #7A7A7A;
+      --rule:         #D6D6D6;
+    }
+
+    /* ── GLOBAL RESETS ─────────────────────────────────────────── */
+    * { border-radius: 0 !important; box-shadow: none !important; }
+
+    .reveal {
+      font-family: 'Roboto', Arial, sans-serif;
+      font-weight: 400;
+      color: var(--charcoal);
+    }
+
+    .reveal .slides > section,
+    .reveal .slides > section > section {
+      padding: 25px 50px;
+      box-sizing: border-box;
+      text-align: left;
+      height: 100%;
+    }
+
+    /* ── TYPOGRAPHY ────────────────────────────────────────────── */
+    .reveal h1 {
+      font-family: 'Roboto Condensed', Arial, sans-serif;
+      font-weight: 400;
+      color: var(--charcoal);
+      font-size: 1.45em;
+      line-height: 1.2;
+      margin: 5px 0 10px;
+      text-transform: none;
+      letter-spacing: normal;
+    }
+
+    /* H2 = the prescribed in-body Ochre application */
+    .reveal h2 {
+      font-family: 'Roboto Condensed', Arial, sans-serif;
+      font-weight: 400;
+      color: var(--ochre);
+      font-size: 0.95em;
+      line-height: 1.2;
+      margin: 0 0 12px;
+      text-transform: none;
+      letter-spacing: normal;
+    }
+
+    .reveal h3 {
+      font-family: 'Roboto Condensed', Arial, sans-serif;
+      font-weight: 400;
+      color: var(--charcoal);
+      font-size: 0.82em;
+      line-height: 1.2;
+      margin: 0.7em 0 0.2em;
+      text-transform: none;
+    }
+
+    .reveal p {
+      font-family: 'Roboto', Arial, sans-serif;
+      font-size: 0.72em;
+      line-height: 1.35;
+      color: var(--charcoal);
+      margin: 0.3em 0;
+    }
+
+    .reveal ul {
+      list-style: disc;
+      padding-left: 1.2em;
+      margin: 0;
+    }
+
+    .reveal ul li {
+      font-family: 'Roboto', Arial, sans-serif;
+      font-size: 0.7em;
+      line-height: 1.35;
+      color: var(--charcoal);
+      margin: 0.32em 0;
+    }
+
+    .reveal strong { font-weight: 700; }
+
+    /* Blockquote: Patrick Hand, direct quotation only */
+    .reveal blockquote {
+      font-family: 'Patrick Hand', cursive;
+      font-size: 0.72em;
+      color: var(--charcoal);
+      line-height: 1.45;
+      margin: 0.6em 0 0;
+      padding: 0;
+      border: none;
+      background: none;
+      width: 100%;
+      font-style: normal;
+    }
+
+    .reveal blockquote cite {
+      font-family: 'Roboto', Arial, sans-serif;
+      font-size: 0.82em;
+      color: var(--muted);
+      display: block;
+      margin-top: 0.3em;
+    }
+
+    /* ── FOOTNOTE (label typography, absolute bottom) ──────────── */
+    .footnote {
+      font-family: 'Roboto', Arial, sans-serif;
+      font-size: 0.55em;
+      color: var(--muted);
+      line-height: 1.3;
+      position: absolute;
+      bottom: 22px;
+      left: 50px;
+      right: 50px;
+    }
+
+    /* ── LAYOUT GRID ───────────────────────────────────────────── */
+    .cols-60-36 {
+      display: grid;
+      grid-template-columns: 60% 36%;
+      gap: 4%;
+      align-items: start;
+    }
+
+    .cols-equal {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4%;
+      align-items: start;
+    }
+
+    .cols-3 {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 3%;
+      align-items: start;
+    }
+
+    /* ── NEUTRAL GREY SURFACE (the only in-body surface variation) */
+    .aside {
+      background: var(--neutral-grey);
+      padding: 14px 18px;
+    }
+
+    /* ── ACADEMIC TABLE ─────────────────────────────────────────── */
+    table.academic {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.6em;
+    }
+
+    table.academic th {
+      background: var(--neutral-grey);
+      color: var(--charcoal);
+      padding: 0.5em 0.7em;
+      text-align: left;
+      font-family: 'Roboto Condensed', Arial, sans-serif;
+      font-weight: 400;
+      border-bottom: 2px solid var(--charcoal);
+    }
+
+    table.academic td {
+      padding: 0.42em 0.7em;
+      vertical-align: top;
+      border-bottom: 1px solid var(--rule);
+      line-height: 1.35;
+      font-family: 'Roboto', Arial, sans-serif;
+    }
+
+    table.academic tr:nth-child(even) td {
+      background: var(--neutral-grey);
+    }
+
+    /* ── ROADMAP TABLE ──────────────────────────────────────────── */
+    table.roadmap {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.68em;
+    }
+
+    table.roadmap tr {
+      border-bottom: 1px solid var(--rule);
+    }
+
+    table.roadmap td {
+      padding: 0.35em 0.5em;
+      font-family: 'Roboto', Arial, sans-serif;
+      color: var(--charcoal);
+      vertical-align: middle;
+    }
+
+    table.roadmap .num {
+      color: var(--ochre);
+      font-family: 'Roboto Condensed', Arial, sans-serif;
+      width: 1.5em;
+      text-align: center;
+    }
+
+    table.roadmap .time {
+      color: var(--muted);
+      text-align: right;
+      white-space: nowrap;
+      font-size: 0.88em;
+    }
+
+    /* ── TITLE SLIDE ─────────────────────────────────────────────── */
+    .reveal .slides section.title-slide {
+      background-color: var(--ochre) !important;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: relative;
+    }
+
+    .title-slide h1 {
+      color: var(--white) !important;
+      font-size: 1.55em;
+      line-height: 1.2;
+      max-width: 85%;
+    }
+
+    .title-slide p {
+      color: var(--white) !important;
+      margin: 0.25em 0;
+    }
+
+    .title-slide .author  { font-size: 0.72em; opacity: 0.9; }
+    .title-slide .meta    { font-size: 0.6em;  opacity: 0.8; font-style: italic; }
+    .title-slide .timing  {
+      font-size: 0.55em;
+      opacity: 0.7;
+      margin-top: 1.2em;
+      border-top: 1px solid rgba(255,255,255,0.35);
+      padding-top: 0.55em;
+    }
+
+    .title-slide .usyd-logo {
+      position: absolute;
+      bottom: 5%;
+      right: 5%;
+      width: 16%;
+      opacity: 0.95;
+    }
+
+    /* ── SEGUE SLIDES ────────────────────────────────────────────── */
+    .reveal .slides section.segue-blue {
+      background-color: var(--blue) !important;
+      text-align: center;
+    }
+
+    .segue-blue h1 {
+      color: var(--white) !important;
+      font-size: 1.75em;
+      text-shadow: 0 0 20px #333;
+    }
+
+    .segue-blue p {
+      color: rgba(255,255,255,0.75) !important;
+      font-size: 0.75em;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 0.6em;
+    }
+
+    .reveal .slides section.segue-ochre {
+      background-color: var(--ochre) !important;
+      text-align: center;
+    }
+
+    .segue-ochre h1 {
+      color: var(--white) !important;
+      font-size: 1.75em;
+      text-shadow: 0 0 20px rgba(0,0,0,0.35);
+    }
+
+    .segue-ochre p {
+      color: rgba(255,255,255,0.8) !important;
+      font-size: 0.75em;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 0.6em;
+    }
+
+    /* ── CLOSING SLIDE ───────────────────────────────────────────── */
+    .reveal .slides section.closing-slide {
+      background-color: var(--ochre) !important;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .closing-slide h1 {
+      color: var(--white) !important;
+      font-size: 1.8em;
+      text-shadow: 0 0 20px rgba(0,0,0,0.3);
+    }
+
+    .closing-slide p { color: rgba(255,255,255,0.9) !important; }
+
+    .closing-slide .doi {
+      font-size: 0.55em;
+      opacity: 0.7;
+      font-style: italic;
+      margin-top: 0.8em;
+    }
+
+    /* ── PROGRESS BAR ──────────────────────────────────────────── */
+    .reveal .progress { color: var(--ochre); }
+  </style>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+
+<!-- ═══════════════════════════════════════════════════════════
+     1. TITLE
+════════════════════════════════════════════════════════════ -->
+<section class="title-slide">
+  <h1>Social and Environmental Responsibility in Accounting: Beyond Financial Metrics</h1>
+  <p class="author">
+    <strong>Akpan, James U.</strong> and <strong>Oluwagbade, Oluyinka I.</strong><br>
+    Department of Accounting, Afe Babalola University, Ado-Ekiti, Nigeria
+  </p>
+  <p class="meta">
+    <em>International Journal of Social Sciences and Management Research</em><br>
+    Vol. 9, No. 9, 2023 &nbsp;·&nbsp; DOI: 10.56201/ijssmr.v9.no9.2023.pg148.173
+  </p>
+  <p class="timing">Presentation approx. 20 minutes · Q&amp;A to follow</p>
+  <img class="usyd-logo" src="_brand-artefacts/logos/USydLogo-white.svg" alt="University of Sydney" />
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     2. ROADMAP
+════════════════════════════════════════════════════════════ -->
+<section>
+  <h1>Presentation Roadmap</h1>
+  <h2>Structure · 20 minutes</h2>
+  <table class="roadmap">
+    <tr><td class="num">1</td><td>Background and motivation</td><td class="time">~2 min</td></tr>
+    <tr><td class="num">2</td><td>Research objectives and questions</td><td class="time">~1 min</td></tr>
+    <tr><td class="num">3</td><td>Methodology</td><td class="time">~2 min</td></tr>
+    <tr><td class="num">4</td><td>Theoretical framework: Triple Bottom Line</td><td class="time">~2 min</td></tr>
+    <tr><td class="num">5</td><td>Ethical considerations in accounting</td><td class="time">~2 min</td></tr>
+    <tr><td class="num">6</td><td>Sustainability reporting: evolution, frameworks, trade-offs</td><td class="time">~3 min</td></tr>
+    <tr><td class="num">7</td><td>Corporate social responsibility</td><td class="time">~2 min</td></tr>
+    <tr><td class="num">8</td><td>Integration of non-financial metrics</td><td class="time">~2 min</td></tr>
+    <tr><td class="num">9</td><td>Key findings, challenges, and future directions</td><td class="time">~2 min</td></tr>
+    <tr><td class="num">10</td><td>Conclusion, recommendations, and contributions</td><td class="time">~2 min</td></tr>
+  </table>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     SEGUE 1
+════════════════════════════════════════════════════════════ -->
+<section class="segue-blue">
+  <p>Part I</p>
+  <h1>Background and Context</h1>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     3. INTRODUCTION
+════════════════════════════════════════════════════════════ -->
+<section>
+  <h1>Why This Study?</h1>
+  <h2>A Changing Professional Landscape</h2>
+  <p>Accounting has historically centred on financial transactions and economic performance. The global business landscape's transformation demands a broader perspective (Gray, 2010).</p>
+  <div class="cols-equal" style="margin-top:0.6em">
+    <div>
+      <h3>Pressures driving change</h3>
+      <ul>
+        <li><strong>Global Financial Crisis (2008)</strong>: exposed the limits of a narrow financial-metric focus</li>
+        <li><strong>Climate change</strong>: tangible business implications now beyond dispute</li>
+        <li><strong>Social inequality</strong>: income, access, and opportunity gaps under sharper scrutiny</li>
+        <li><strong>Corporate misconduct</strong>: ethical breaches and privacy violations eroding public trust</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Stakeholder response</h3>
+      <ul>
+        <li>Investors, customers, employees, and regulators now demand transparency and accountability</li>
+        <li>Expectations extend beyond financial success to social and environmental responsibility</li>
+        <li>Accounting professionals must adapt: ethics, sustainability reporting, and non-financial metrics</li>
+      </ul>
+    </div>
+  </div>
+  <p class="footnote">Adams (2017); Gray (2010); Dillard (2008)</p>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     4. OBJECTIVES AND RESEARCH QUESTIONS
+════════════════════════════════════════════════════════════ -->
+<section>
+  <h1>Research Objectives and Questions</h1>
+  <h2>Examining the expanding role of accountants in contemporary business</h2>
+  <div class="cols-60-36">
+    <div>
+      <h3>Objectives</h3>
+      <ul>
+        <li><strong>O1.</strong> Explore the ethical considerations underpinning the transformation of accounting practices</li>
+        <li><strong>O2.</strong> Investigate the integration of sustainability reporting and CSR into the accounting profession</li>
+        <li><strong>O3.</strong> Analyse the implications of incorporating non-financial metrics in organisational decision-making</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Research questions</h3>
+      <ul>
+        <li><strong>RQ1.</strong> How have ethical considerations shifted accounting practices beyond financial reporting?</li>
+        <li><strong>RQ2.</strong> What are the key components of sustainability reporting and CSR, and how do they impact organisations?</li>
+        <li><strong>RQ3.</strong> What are the challenges and benefits of integrating non-financial metrics into decision-making?</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     5. METHODOLOGY
+════════════════════════════════════════════════════════════ -->
+<section>
+  <h1>Methodology</h1>
+  <h2>Qualitative, exploratory, multi-case study design</h2>
+  <div class="cols-3">
+    <div>
+      <h3>Research design</h3>
+      <ul>
+        <li>Qualitative, exploratory paradigm</li>
+        <li>Multi-case study approach</li>
+        <li>Organisations selected on commitment to sustainability reporting</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Data collection</h3>
+      <ul>
+        <li>Semi-structured interviews: senior accounting executives, sustainability officers, academics</li>
+        <li>Document analysis: annual reports, sustainability reports, internal documents</li>
+        <li>Literature review</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Data analysis</h3>
+      <ul>
+        <li>Thematic analysis</li>
+        <li>Open, axial, and selective coding</li>
+        <li>Cross-case comparative analysis to identify commonalities and best practices</li>
+      </ul>
+    </div>
+  </div>
+  <div class="aside" style="margin-top:0.7em">
+    <p style="font-size:0.65em"><strong>Ethical safeguards:</strong> Informed consent obtained from all participants &nbsp;·&nbsp; Anonymisation and organisational de-identification &nbsp;·&nbsp; Secure electronic and physical data storage</p>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     SEGUE 2
+════════════════════════════════════════════════════════════ -->
+<section class="segue-blue">
+  <p>Part II</p>
+  <h1>Literature and Theoretical Framework</h1>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     6. TRADITIONAL VS EVOLVING ROLE
+════════════════════════════════════════════════════════════ -->
+<section>
+  <h1>The Shifting Role of Accountants</h1>
+  <h2>From financial guardians to stewards of social and environmental responsibility</h2>
+  <div class="cols-equal">
+    <div>
+      <h3>Traditional role</h3>
+      <ul>
+        <li>Meticulous record-keepers and financial gatekeepers (Dillard, 2008)</li>
+        <li>Accuracy of profit/loss statements, balance sheets, cash flows</li>
+        <li>Compliance with GAAP and established regulatory frameworks</li>
+        <li>Purely quantitative: monetary values, profit margins, equity positions</li>
+        <li>Primary audience: shareholders, creditors, regulatory authorities</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Expanded role today</h3>
+      <ul>
+        <li>Sustainability reporting: ESG performance measurement and disclosure</li>
+        <li>Ethical stewardship and stakeholder advocacy</li>
+        <li>Measurement and reporting of non-financial intangibles</li>
+        <li>Integration of social and environmental impacts into decision-making</li>
+        <li>Primary audience: all stakeholders, employees, communities, society</li>
+      </ul>
+    </div>
+  </div>
+  <div class="aside" style="margin-top:0.7em">
+    <p style="font-size:0.65em"><strong>Five key drivers:</strong> Globalisation and market complexity &nbsp;·&nbsp; Rising stakeholder expectations &nbsp;·&nbsp; Environmental sustainability imperatives &nbsp;·&nbsp; Advances in data analytics &nbsp;·&nbsp; Regulatory and standard-setting changes (IASB, GRI, SASB, TCFD)</p>
+  </div>
+  <p class="footnote">Gray (2010); Nobes (2018); Bebbington et al. (2017)</p>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     7. TRIPLE BOTTOM LINE
+════════════════════════════════════════════════════════════ -->
+<section>
+  <h1>The Triple Bottom Line Framework</h1>
+  <h2>Elkington (1997): organisational success evaluated across three dimensions</h2>
+  <div class="cols-3">
+    <div>
+      <h3>People (Social)</h3>
+      <p>Well-being of employees, fair labour practices, diversity and inclusion, community impact, human rights, and ethical supply chain management. Accountants measure and report on workforce and community metrics.</p>
+    </div>
+    <div>
+      <h3>Planet (Environmental)</h3>
+      <p>Greenhouse gas emissions, energy and water consumption, waste management, biodiversity, and sustainable sourcing. Environmental metrics are not only indicators of responsibility but drivers of cost efficiency and regulatory compliance.</p>
+    </div>
+    <div>
+      <h3>Profit (Financial)</h3>
+      <p>Financial performance remains central, but is balanced with social and environmental performance. Ethical accounting ensures financial metrics are achieved without compromising people or the planet (Savitz and Weber, 2006).</p>
+    </div>
+  </div>
+  <div class="aside" style="margin-top:0.7em">
+    <p style="font-size:0.65em">The TBL reframes the definition of organisational success. It is the conceptual anchor for sustainability reporting, CSR, and the integration of non-financial metrics into decision-making throughout this study.</p>
+  </div>
+  <p class="footnote">Elkington (1997); Savitz and Weber (2006)</p>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     SEGUE 3
+════════════════════════════════════════════════════════════ -->
+<section class="segue-blue">
+  <p>Part III</p>
+  <h1>Findings</h1>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     8. ETHICAL CONSIDERATIONS
+════════════════════════════════════════════════════════════ -->
+<section>
+  <h1>Ethical Considerations in Accounting</h1>
+  <h2>The integration of non-financial reporting has expanded the ethical terrain (Gibson-Sweet and Hamilton, 2017)</h2>
+  <div class="cols-equal">
+    <div>
+      <h3>Transparency and disclosure</h3>
+      <p>Balancing completeness of non-financial disclosure against information overload. How much to disclose, which metrics to prioritise, and how to accurately represent social and environmental performance.</p>
+      <h3>Accuracy and reliability</h3>
+      <p>Rigorous data collection to avoid misrepresentations that erode stakeholder trust. Ethical lapses have significant repercussions for the profession's credibility.</p>
+      <h3>Fairness and objectivity</h3>
+      <p>Avoiding bias in metric selection and reporting. All stakeholders receive equitable, consistent information for informed decision-making.</p>
+    </div>
+    <div>
+      <h3>Integrity and professionalism</h3>
+      <p>The same standards of integrity applied to financial data must apply to social and environmental data. Accountants act in the best interest of clients within professional codes of conduct.</p>
+      <h3>Conflicts of interest</h3>
+      <p>Reporting on an organisation's ESG performance while financially tied to it requires transparent disclosure and, where necessary, recusal from specific responsibilities.</p>
+      <h3>Regulatory compliance</h3>
+      <p>Navigating GRI, SASB, and TCFD standards. Ethical practitioners stay current with evolving requirements and ensure compliance.</p>
+    </div>
+  </div>
+  <p class="footnote">AICPA and IFAC have revised codes of conduct to encompass social and environmental dimensions, emphasising integrity, objectivity, and transparency.</p>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     9. SUSTAINABILITY REPORTING: EVOLUTION AND FRAMEWORKS
+════════════════════════════════════════════════════════════ -->
+<section>
+  <h1>Sustainability Reporting</h1>
+  <h2>Evolution, standards, and their role in non-financial disclosure</h2>
+  <div class="cols-60-36">
+    <div>
+      <h3>Historical development</h3>
+      <ul>
+        <li><strong>1970s–80s</strong>: Early environmental reporting in response to public concern</li>
+        <li><strong>1990s</strong>: Triple Bottom Line formalised; social, environmental, and financial performance linked</li>
+        <li><strong>1997</strong>: Global Reporting Initiative (GRI) founded; first standardised framework</li>
+        <li><strong>2013</strong>: IIRC releases the International &lt;IR&gt; Framework: integrated financial and non-financial reporting</li>
+        <li><strong>2014</strong>: EU Directive 2014/95/EU mandates non-financial disclosure for large companies</li>
+        <li><strong>2016+</strong>: SASB industry-specific standards; TCFD climate-related disclosures gain traction</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Key frameworks</h3>
+      <div class="aside" style="margin-bottom:0.5em">
+        <p style="font-size:0.65em"><strong>GRI</strong><br>Comprehensive ESG guidelines across all industries; most widely adopted globally (GRI, 2021)</p>
+      </div>
+      <div class="aside" style="margin-bottom:0.5em">
+        <p style="font-size:0.65em"><strong>SASB</strong><br>Industry-specific material topics; sector relevance over universal coverage (SASB, 2021)</p>
+      </div>
+      <div class="aside" style="margin-bottom:0.5em">
+        <p style="font-size:0.65em"><strong>TCFD</strong><br>Climate-related financial disclosures; increasingly mandated by regulators</p>
+      </div>
+      <div class="aside">
+        <p style="font-size:0.65em"><strong>IIRC &lt;IR&gt;</strong><br>Integrates financial and non-financial information into a value-creation narrative (IIRC, 2013)</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     10. SUSTAINABILITY REPORTING: BENEFITS AND CHALLENGES
+════════════════════════════════════════════════════════════ -->
+<section>
+  <h1>Sustainability Reporting: Benefits and Challenges</h1>
+  <h2>The practice offers significant returns but confronts persistent implementation barriers</h2>
+  <div class="cols-equal">
+    <div>
+      <h3>Benefits</h3>
+      <ul>
+        <li><strong>Enhanced transparency</strong>: fosters stakeholder trust and organisational accountability</li>
+        <li><strong>Improved decision-making</strong>: ESG data reveals risk exposure and innovation opportunities</li>
+        <li><strong>Stakeholder engagement</strong>: drives alignment with investor, community, and employee interests</li>
+        <li><strong>Competitive advantage</strong>: attracts ESG-focused investment; strengthens institutional reputation</li>
+        <li><strong>Strategic alignment</strong>: connects sustainability performance to long-term value creation</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Challenges</h3>
+      <ul>
+        <li><strong>Data collection and validation</strong>: resource-intensive, particularly for complex global organisations</li>
+        <li><strong>Standardisation and comparability</strong>: framework variations across sectors impede benchmarking</li>
+        <li><strong>Greenwashing risk</strong>: misrepresentation of commitments undermines the credibility of the entire practice</li>
+        <li><strong>Cultural resistance</strong>: embedding ESG in decision-making requires a significant organisational mindset shift</li>
+      </ul>
+    </div>
+  </div>
+  <p class="footnote">Bebbington et al. (2017); Moon et al. (2019); PRI (2020)</p>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     11. CORPORATE SOCIAL RESPONSIBILITY
+════════════════════════════════════════════════════════════ -->
+<section>
+  <h1>Corporate Social Responsibility</h1>
+  <h2>An organisation's holistic commitment to ethical conduct, stakeholder engagement, and sustainable practice</h2>
+  <div class="cols-60-36">
+    <div>
+      <h3>Core CSR dimensions</h3>
+      <ul>
+        <li><strong>Ethical commitment</strong>: integrity, human rights, fair labour, ethical supply chains (Carroll, 1991)</li>
+        <li><strong>Stakeholder engagement</strong>: ongoing dialogues beyond shareholders; input shapes responsible practice (Moon et al., 2019)</li>
+        <li><strong>Sustainable practices</strong>: reducing emissions, conserving resources, sustainable sourcing</li>
+        <li><strong>Reputation enhancement</strong>: attracts customers, investors, and talent; mitigates reputational risk (Porter and Kramer, 2006)</li>
+        <li><strong>Stakeholder trust</strong>: social licence to operate; long-term relationships and community support (Matten and Moon, 2008)</li>
+        <li><strong>Long-term sustainability</strong>: resilience favoured over short-term financial gain</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Case studies</h3>
+      <div class="aside" style="margin-bottom:0.5em">
+        <p style="font-size:0.65em"><strong>Unilever</strong><br>Sustainable Living Plan: specific social and environmental targets with regular public progress reports (Unilever, 2021)</p>
+      </div>
+      <div class="aside" style="margin-bottom:0.5em">
+        <p style="font-size:0.65em"><strong>Danone</strong><br>"One Planet. One Health": business strategy aligned to sustainability; transparent environmental and social impact reporting (Danone, 2021)</p>
+      </div>
+      <div class="aside">
+        <p style="font-size:0.65em"><strong>IKEA</strong><br>People and Planet Positive strategy: commits to producing as much renewable energy as the company consumes (IKEA, 2021)</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     12. NON-FINANCIAL METRICS
+════════════════════════════════════════════════════════════ -->
+<section>
+  <h1>Integration of Non-Financial Metrics</h1>
+  <h2>Financial indicators alone provide an incomplete picture of organisational performance and risk (Eccles et al., 2019)</h2>
+  <div class="cols-equal">
+    <div>
+      <h3>Why non-financial metrics?</h3>
+      <ul>
+        <li><strong>Holistic assessment</strong>: environmental impact, social responsibility, and employee well-being affect financial performance indirectly but significantly</li>
+        <li><strong>Risk management</strong>: reveals reputational, ethical, and environmental risks not visible in financial data</li>
+        <li><strong>Stakeholder expectations</strong>: investors, customers, employees, and regulators demand ESG transparency</li>
+      </ul>
+      <h3>Key metric categories</h3>
+      <ul>
+        <li><strong>Environmental</strong>: carbon emissions, resource use, waste generation</li>
+        <li><strong>Employee well-being</strong>: satisfaction, diversity and inclusion, workplace safety, professional development</li>
+        <li><strong>Social responsibility</strong>: community impact, fair labour, ethical business conduct</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Integration frameworks</h3>
+      <div class="aside" style="margin-bottom:0.5em">
+        <p style="font-size:0.65em"><strong>Balanced Scorecard (Kaplan and Norton, 1996)</strong><br>Links financial, customer, internal process, and learning metrics to strategic goals</p>
+      </div>
+      <div class="aside" style="margin-bottom:0.5em">
+        <p style="font-size:0.65em"><strong>ESG Integration</strong><br>Investors embed Environmental, Social, and Governance factors into investment decisions, directly affecting company valuation</p>
+      </div>
+      <div class="aside" style="margin-bottom:0.5em">
+        <p style="font-size:0.65em"><strong>Scenario Analysis</strong><br>Models potential climate, social, or ethical disruption impacts on financial performance</p>
+      </div>
+      <div class="aside">
+        <p style="font-size:0.65em"><strong>Integrated Reporting (IIRC, 2013)</strong><br>Presents financial and non-financial data cohesively to communicate value creation</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     13. KEY FINDINGS
+════════════════════════════════════════════════════════════ -->
+<section>
+  <h1>Key Findings</h1>
+  <h2>Five findings from thematic analysis and cross-case comparison</h2>
+  <table class="academic">
+    <thead>
+      <tr>
+        <th style="width:3%">#</th>
+        <th style="width:48%">Finding</th>
+        <th>Significance</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>Accounting has evolved beyond record-keeping to encompass social and environmental responsibility</td>
+        <td>Redefines the professional identity and scope of the accounting function</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Ethical considerations are now integral, affecting transparency, accuracy, and reporting standards</td>
+        <td>AICPA and IFAC codes actively revised to reflect this shift in professional obligations</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Sustainability reporting provides a structured framework for ESG disclosure</td>
+        <td>GRI, SASB, TCFD, and IIRC frameworks increasingly adopted across industries</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>CSR enhances reputation and stakeholder trust when properly integrated into accounting practice</td>
+        <td>Demonstrated by Unilever, Danone, and IKEA case studies</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>Non-financial metrics integration is critical for holistic, sustainable decision-making</td>
+        <td>Balanced Scorecard and ESG integration frameworks operationalise this in practice</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     SEGUE 4
+════════════════════════════════════════════════════════════ -->
+<section class="segue-ochre">
+  <p>Part IV</p>
+  <h1>Discussion and Implications</h1>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     14. CHALLENGES AND FUTURE DIRECTIONS
+════════════════════════════════════════════════════════════ -->
+<section>
+  <h1>Challenges and Future Directions</h1>
+  <h2>Implementation barriers coexist with emerging opportunities for the profession</h2>
+  <div class="cols-equal">
+    <div>
+      <h3>Current challenges</h3>
+      <ul>
+        <li><strong>Data accuracy and reliability</strong>: non-financial data collection is complex, especially for global organisations</li>
+        <li><strong>Lack of global standardisation</strong>: framework fragmentation causes inconsistency and impedes cross-sector comparison</li>
+        <li><strong>Cultural resistance</strong>: embedding ESG in decision-making requires a fundamental organisational mindset shift</li>
+        <li><strong>Greenwashing</strong>: misrepresentation of commitments undermines credibility sector-wide</li>
+        <li><strong>Stakeholder complexity</strong>: balancing diverse and sometimes conflicting stakeholder interests</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Future trends and innovations</h3>
+      <ul>
+        <li><strong>Impact investing</strong>: dual financial and social/environmental return mandates gain mainstream traction</li>
+        <li><strong>AI and blockchain</strong>: enhance data collection, verification, and transparent non-financial reporting</li>
+        <li><strong>Climate scenario analysis</strong>: modelling ESG risk at board and strategic planning level</li>
+        <li><strong>Integrated reporting maturation</strong>: wider adoption of the IIRC &lt;IR&gt; Framework</li>
+        <li><strong>Mandatory regulation</strong>: expanding disclosure requirements (EU CSRD; ISSB standards)</li>
+      </ul>
+    </div>
+  </div>
+  <p class="footnote">Regulatory developments, global standardisation, and technology will collectively shape the next phase of social and environmental accounting.</p>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     15. EXPANDING PROFESSIONAL ROLE
+════════════════════════════════════════════════════════════ -->
+<section>
+  <h1>The Accountant's Expanding Professional Role</h1>
+  <h2>From compliance officers to advocates for stakeholders and sustainability</h2>
+  <div class="cols-3" style="margin-bottom:0.6em">
+    <div>
+      <h3>Paradigm shift</h3>
+      <ul>
+        <li>From financial reporting only to sustainability reporting</li>
+        <li>From shareholder primacy to all-stakeholder accountability</li>
+        <li>From compliance to proactive ethical stewardship</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Stakeholder advocacy</h3>
+      <ul>
+        <li>Engaging employees, customers, suppliers, communities, and investors</li>
+        <li>Facilitating dialogues and gathering input</li>
+        <li>Balancing financial and non-financial interests simultaneously</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Professional implications</h3>
+      <ul>
+        <li><strong>Broader skills</strong>: sustainability knowledge, ethical reasoning, stakeholder engagement</li>
+        <li><strong>Revised standards</strong>: professional codes updated (AICPA, IFAC)</li>
+        <li><strong>New curricula</strong>: accounting education incorporating ESG, ethics, and integrated reporting</li>
+      </ul>
+    </div>
+  </div>
+  <blockquote>
+    "Accountants are now at the forefront of addressing social and environmental responsibility, advocating for stakeholders, and contributing to a more sustainable and ethical business landscape."
+    <cite>Akpan and Oluwagbade (2023, p. 161)</cite>
+  </blockquote>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     16. RECOMMENDATIONS
+════════════════════════════════════════════════════════════ -->
+<section>
+  <h1>Recommendations</h1>
+  <h2>For organisations and accountants, and for policymakers</h2>
+  <div class="cols-equal">
+    <div>
+      <h3>Organisations and accountants</h3>
+      <ul>
+        <li><strong>Commit to transparency</strong>: accurately disclose both financial and non-financial metrics to build credibility and stakeholder trust</li>
+        <li><strong>Invest in continuous education</strong>: stay current on emerging standards, regulations, and sustainability reporting best practices</li>
+        <li><strong>Conduct thorough risk assessments</strong>: include climate and ESG scenario analysis to identify and mitigate social, environmental, and ethical risks</li>
+        <li><strong>Collaborate</strong>: partner with industry peers and standard-setting bodies to advance harmonised reporting frameworks</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Policymakers</h3>
+      <ul>
+        <li><strong>Regulatory mandates</strong>: consider frameworks that require sustainability reporting, particularly for large organisations, building on the EU Directive 2014/95/EU model</li>
+        <li><strong>Global standardisation</strong>: support collaborative efforts among GRI, SASB, TCFD, and IIRC to reduce framework fragmentation</li>
+        <li><strong>Anti-greenwashing enforcement</strong>: develop mechanisms to verify ESG claims and penalise material misrepresentation</li>
+        <li><strong>Research investment</strong>: fund longitudinal studies on the effectiveness of regulatory frameworks in promoting responsible accounting</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     SEGUE 5
+════════════════════════════════════════════════════════════ -->
+<section class="segue-ochre">
+  <p>Part V</p>
+  <h1>Conclusion</h1>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     17. CONCLUSION AND CONTRIBUTIONS
+════════════════════════════════════════════════════════════ -->
+<section>
+  <h1>Conclusion and Contributions to Knowledge</h1>
+  <h2>A transformative shift in the profession's scope, ethics, and social contract</h2>
+  <div class="cols-60-36">
+    <div>
+      <h3>Contributions</h3>
+      <ul>
+        <li>Illuminates the expanding role of accountants beyond financial metrics toward social and environmental stewardship</li>
+        <li>Highlights the critical need for ethical frameworks in non-financial reporting, and how professional codes are adapting</li>
+        <li>Underscores sustainability reporting and CSR as essential, not optional, accounting practices for contemporary organisations</li>
+        <li>Demonstrates how non-financial metric integration enables holistic, sustainable organisational decision-making</li>
+      </ul>
+      <h3 style="margin-top:0.7em">Directions for future research</h3>
+      <ul>
+        <li>In-depth industry and regional variation studies</li>
+        <li>Longitudinal tracking of accounting practice evolution</li>
+        <li>Effectiveness of regulatory frameworks in promoting responsible accounting</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Limitations</h3>
+      <ul>
+        <li>Exploratory design: breadth prioritised over depth in any single context</li>
+        <li>Knowledge cutoff: September 2021</li>
+        <li>Industry and regional variations not addressed</li>
+      </ul>
+      <blockquote style="margin-top:0.9em">
+        "As organisations navigate an evolving landscape, transparency and ethical conduct will continue to be paramount, driving sustainability and responsible business practices in the years to come."
+        <cite>Akpan and Oluwagbade (2023, p. 170)</cite>
+      </blockquote>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     18. CLOSING
+════════════════════════════════════════════════════════════ -->
+<section class="closing-slide">
+  <h1>Thank You</h1>
+  <p><strong>Social and Environmental Responsibility in Accounting: Beyond Financial Metrics</strong></p>
+  <p>Akpan, James U. and Oluwagbade, Oluyinka I.<br>
+  Department of Accounting, Afe Babalola University, Ado-Ekiti, Nigeria</p>
+  <p style="margin-top:0.9em; font-size:0.68em; opacity:0.95">
+    The accounting profession is undergoing a fundamental transformation: from guardians of financial data to stewards of social and environmental responsibility. Accountants who embrace this shift will be indispensable architects of sustainable business.
+  </p>
+  <p class="doi">
+    DOI: 10.56201/ijssmr.v9.no9.2023.pg148.173<br>
+    <em>International Journal of Social Sciences and Management Research, Vol. 9, No. 9, 2023</em>
+  </p>
+  <p style="margin-top:1.2em; font-size:0.72em; opacity:0.9"><strong>Questions and Discussion</strong></p>
+</section>
+
+</div><!-- /slides -->
+</div><!-- /reveal -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/reveal.min.js"></script>
+<script>
+  Reveal.initialize({
+    hash: true,
+    slideNumber: 'c/t',
+    progress: true,
+    controls: true,
+    controlsLayout: 'bottom-right',
+    transition: 'slide',
+    transitionSpeed: 'fast',
+    backgroundTransition: 'fade',
+    width: 1100,
+    height: 700,
+    margin: 0.05,
+    center: true,
+    plugins: []
+  });
+</script>
+</body>
+</html>
